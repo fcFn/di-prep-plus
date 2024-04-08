@@ -1,0 +1,33 @@
+.bottom-row,
+.top-row {
+  display: flex;
+  width: 100%;
+  gap: 16px;
+  margin: 0 0 16px 0;
+}
+
+.top-row {
+  height: 100px;
+}
+
+.bottom-row {
+  height: 400px;
+}
+
+.tall {
+  flex: 1 0 100px;
+  background-color: salmon;
+}
+
+.tall:nth-child(2) {
+  background-color: lightgreen;
+}
+
+.tall:last-child {
+  background-color: orange;
+}
+
+.extralarge {
+  flex: 1 0 100%;
+  background-color: rgb(235, 237, 108);
+}
