@@ -1,0 +1,194 @@
+:root {
+  --primary-color: #fff; /* try #212121 also for dark mode */
+  --background-color: #212121;
+  --timeline-color: rgb(242, 91, 83);
+  --font: sans-serif;
+}
+
+:not(ul) {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font);
+  justify-content: center;
+}
+
+.timeline__section {
+  background-color: lightblue;
+}
+
+.timeline__container {
+  margin: 0 auto;
+  padding: 0px 20px 0 20px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Outer Layer with the timeline border */
+.timeline__outer {
+  border-left: 2px solid #333;
+}
+
+.timeline__card {
+  position: relative;
+  margin: 0 0 20px 20px;
+  padding: 10px;
+  background: #333;
+  color: rgb(230, 228, 228);
+  border-radius: 8px;
+  max-width: 400px;
+}
+
+/* Information about the timeline */
+.timeline__info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.timeline__card-title {
+  color: var(--timeline-color);
+  position: relative;
+}
+
+/* Timeline dot  */
+.timeline__card-title::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 999px;
+  left: -39px;
+  border: 3px solid var(--timeline-color);
+}
+
+.hero__container {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero__image-container {
+  display: flex;
+  flex-direction: column;
+  background-image: url("img/David_Graeber.jpg");
+  background-size: 200%;
+  background-position: cover;
+}
+
+.hero__photo-attr {
+  font-size: 11px;
+  text-align: center;
+  background-color: black;
+  color: white;
+}
+
+.hero__photo-attr a {
+  filter: invert(1);
+}
+
+.timeline__header,
+.works__title {
+  font-size: 24px;
+  text-align: center;
+  clear: both;
+  padding: 10px;
+}
+
+/* Fix the timeline border so that it doesn't go all the way down */ 
+/* Probably not the best way to do that ¯\_(ツ)_/¯ */ 
+.timeline__border-fix {
+  border-left: 2px solid lightblue;
+  margin-left: -2px;
+  height: 12px;
+  top: -11px;
+  margin-top: -14px;
+  display: hidden;
+}
+
+.hero__image {
+  height: 66vh;
+  object-fit: contain;
+  min-height: 480px;
+}
+
+.hero__quote-text {
+  flex: 1 0 100px;
+  font-size: 38px;
+  font-style: italic;
+  text-align: center;
+  padding: 10px 0 0 0;
+}
+.hero__quote-author {
+  font-size: 20px;
+  text-align: right;
+  text-align: center;
+}
+
+.hero__about-text {
+  font-size: 20px;
+  text-align: justify;
+  padding: 10px;
+}
+
+.hero__text-container {
+  background-color: lightgreen;
+}
+
+.title__text {
+  font-size: 38px;
+  text-align: center;
+  background-color: maroon;
+  padding: 10px;
+  color: white;
+}
+
+.works__section {
+  background-color: rgb(236, 236, 168);
+}
+.works__list {
+  margin: 0;
+  padding-bottom: 10px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+footer {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(241, 159, 129);
+}
+
+@media (min-width: 768px) {
+  .hero__container {
+    display: block;
+    background-color: lightgreen;
+    height: max-content;
+    gap: 10px;
+  }
+  .hero__image {
+    margin: 0 10px 0 0;
+  }
+  .hero__image-container {
+    float: inline-start;
+    display: block;
+    background: unset;
+  }
+  .hero__text-container {
+    background-color: unset;
+    min-height: 69vh;
+  }
+  .hero__photo-attr {
+    color: black;
+    background-color: unset;
+  }
+  .hero__photo-attr a {
+    filter: unset;
+  }
+  .hero__quote-text {
+    padding: 0;
+  }
+}
