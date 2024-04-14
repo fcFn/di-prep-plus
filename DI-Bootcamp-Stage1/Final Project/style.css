@@ -102,12 +102,10 @@ body {
 /* Fix the timeline border so that it doesn't go all the way down */ 
 /* Probably not the best way to do that ¯\_(ツ)_/¯ */ 
 .timeline__border-fix {
-  border-left: 2px solid lightblue;
+  border-left: 3px solid lightblue;
   margin-left: -2px;
   height: 12px;
-  top: -11px;
   margin-top: -14px;
-  display: hidden;
 }
 
 .hero__image {
