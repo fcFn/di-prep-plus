@@ -30,8 +30,13 @@ h2 {
 }
 
 header {
-  background-color: rgb(0,0,0);
-  background: linear-gradient(45deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 50%, rgba(191,9,9,1) 50%);
+  background-color: rgb(0, 0, 0);
+  background: linear-gradient(
+    45deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 1) 50%,
+    rgba(191, 9, 9, 1) 50%
+  );
 }
 
 .title__text {
@@ -262,5 +267,9 @@ footer {
   }
   .works_info {
     padding: unset;
+  }
+  .title__container {
+    max-width: 800px;
+    margin: 0 auto;
   }
 }
