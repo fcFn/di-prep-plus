@@ -29,13 +29,27 @@ h2 {
   padding: 10px;
 }
 
+header {
+  background-color: rgb(0,0,0);
+  background: linear-gradient(45deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 50%, rgba(191,9,9,1) 50%);
+}
+
 .title__text {
   font-size: 38px;
   text-align: center;
-  background-color: maroon;
   padding: 10px;
   color: white;
   font-family: Roboto sans-serif;
+  background-color: transparent;
+  text-align: left;
+}
+
+.title__subtext {
+  color: white;
+  padding: 10px;
+  background-color: transparent;
+  text-align: right;
+  font-style: italic;
 }
 
 .timeline__section {
