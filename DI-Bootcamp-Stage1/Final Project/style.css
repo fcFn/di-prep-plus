@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
 :root {
   --primary-color: #fff; /* try #212121 also for dark mode */
@@ -7,14 +7,35 @@
   --font: sans-serif;
 }
 
+/* Fix the bullet points not showing */
 :not(ul) {
   margin: 0;
   padding: 0;
 }
 
+ul {
+  padding: 0 0 0 20px;
+}
+
 body {
   font-family: var(--font);
   justify-content: center;
+}
+
+h2 {
+  font-size: 32px;
+  text-align: center;
+  clear: both;
+  padding: 10px;
+}
+
+.title__text {
+  font-size: 38px;
+  text-align: center;
+  background-color: maroon;
+  padding: 10px;
+  color: white;
+  font-family: Roboto sans-serif;
 }
 
 .timeline__section {
@@ -91,16 +112,8 @@ body {
   filter: invert(1);
 }
 
-.timeline__header,
-.works__title {
-  font-size: 24px;
-  text-align: center;
-  clear: both;
-  padding: 10px;
-}
-
-/* Fix the timeline border so that it doesn't go all the way down */ 
-/* Probably not the best way to do that ¯\_(ツ)_/¯ */ 
+/* Fix the timeline border so that it doesn't go all the way down */
+/* Probably not the best way to do that ¯\_(ツ)_/¯ */
 .timeline__border-fix {
   border-left: 3px solid lightblue;
   margin-left: -2px;
@@ -137,23 +150,8 @@ body {
   background-color: lightgreen;
 }
 
-.title__text {
-  font-size: 38px;
-  text-align: center;
-  background-color: maroon;
-  padding: 10px;
-  color: white;
-  font-family: Roboto sans-serif;
-}
-
 .works__section {
   background-color: rgb(236, 236, 168);
-}
-.works__list {
-  margin: 0;
-  padding-bottom: 10px;
-  max-width: 800px;
-  margin: 0 auto;
 }
 
 footer {
@@ -162,7 +160,59 @@ footer {
   justify-content: center;
   background-color: rgb(241, 159, 129);
 }
+.works__container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
 
+.works__card {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.works__image {
+  flex: 0 1 auto;
+  width: 200px;
+}
+
+.works__intro {
+  flex: 1 0 100px;
+  margin: 0 0 10px 0;
+  padding: 0 0 0 10px;
+}
+
+.works__card-title {
+  font-size: 24px;
+  margin: 0 0 10px 0;
+}
+
+.works__info {
+  flex: 1 0 100px;
+  padding: 10px;
+}
+
+.works__info-paragraph {
+  margin: 0 0 10px 0;
+}
+
+.biblio__section {
+  padding: 10px;
+  background-color: rgb(233, 180, 244);
+}
+
+.biblio_list {
+  margin: 0;
+  padding-bottom: 10px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.biblio_list-title {
+  margin: 10px 0 0 0;
+}
 @media (min-width: 768px) {
   .hero__container {
     display: block;
@@ -191,5 +241,12 @@ footer {
   }
   .hero__quote-text {
     padding: 0;
+  }
+  .works__card {
+    flex-direction: row;
+    align-items: unset;
+  }
+  .works_info {
+    padding: unset;
   }
 }
